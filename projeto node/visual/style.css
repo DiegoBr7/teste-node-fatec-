@@ -1,0 +1,100 @@
+ body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #6dd5ed, #2193b0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus {
+      border-color: #2193b0;
+      box-shadow: 0 0 5px #2193b0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .buttons button {
+      flex: 1;
+      margin: 0 5px;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-acessar {
+      background-color: #2193b0;
+      color: #fff;
+    }
+
+    .btn-acessar:hover {
+      background-color: #176b85;
+    }
+
+    .btn-cancelar {
+      background-color: #bbb;
+      color: #333;
+    }
+
+    .btn-cancelar:hover {
+      background-color: #999;
+    }
+
+    .btn-esqueci {
+      background: transparent;
+      color: #2193b0;
+      text-align: center;
+      margin-top: 15px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 10px;
+      display: none;
+    }
