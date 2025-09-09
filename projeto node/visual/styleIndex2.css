@@ -1,0 +1,188 @@
+/* ===== Página de Autenticação (Registro) ===== */
+.auth-container {
+  min-height: calc(100vh - 88px); /* header ~88px */
+  display: grid;
+  place-items: center;
+  padding: var(--space-xl);
+}
+
+.auth-card {
+  width: min(520px, 92vw);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(30px);
+  padding: clamp(var(--space-lg), 4vw, var(--space-xl));
+  box-shadow: var(--shadow-lg);
+  animation: float 8s ease-in-out infinite;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.auth-header i {
+  font-size: 2rem;
+  color: var(--primary-500);
+  filter: drop-shadow(0 0 8px rgba(0,229,216,.25));
+}
+
+.auth-header h2 {
+  margin-top: var(--space-sm);
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-400), var(--primary-600));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auth-subtitle {
+  margin-top: var(--space-xs);
+  color: var(--text-secondary);
+  font-size: .95rem;
+}
+
+/* Inputs */
+.input-group { margin-bottom: var(--space-md); }
+
+.input-group label {
+  display: block;
+  margin-bottom: .35rem;
+  color: var(--text-secondary);
+  font-size: .9rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: var(--space-md);
+  border: 1.5px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  background: var(--glass-bg);
+  color: var(--text-primary);
+  outline: none;
+  transition: all var(--transition-normal);
+}
+
+.input-group input::placeholder { color: var(--text-muted); }
+
+.input-group input:focus {
+  border-color: var(--primary-500);
+  background: var(--glass-hover);
+  box-shadow: 0 0 0 3px rgba(0,229,216,0.1);
+}
+
+/* Mostrar/Ocultar senha */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input { padding-right: 42px; }
+
+.toggle-password {
+  position: absolute;
+  right: .5rem;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.toggle-password:hover {
+  background: var(--glass-hover);
+  color: var(--text-primary);
+}
+
+/* Força da senha */
+.strength {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .5rem;
+}
+
+.strength .bar {
+  width: 26px; height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid var(--glass-border);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.strength .bar.active { background: var(--primary-500); transform: translateY(-1px); }
+.strength .label { margin-left: .35rem; color: var(--text-muted); font-size: .8rem; }
+
+/* Termos */
+.terms {
+  display: flex; align-items: center; gap: .5rem;
+  color: var(--text-secondary);
+  margin: var(--space-sm) 0 var(--space-md);
+}
+
+.terms input { accent-color: var(--primary-500); }
+.terms .link { color: var(--primary-500); text-decoration: none; }
+.terms .link:hover { text-decoration: underline; }
+
+/* Erros */
+.error {
+  display: block;
+  margin-top: .35rem;
+  color: #ffb3b3;
+  font-size: .8rem;
+  min-height: 1lh; /* evita "pular" layout */
+}
+
+/* Botão submit */
+.submit-btn {
+  width: 100%;
+  padding: var(--space-md);
+  border: none;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+  color: var(--bg-dark);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, var(--primary-400), var(--primary-600));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+.submit-btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Troca login/registro */
+.auth-switch {
+  margin-top: var(--space-md);
+  color: var(--text-secondary);
+  font-size: .95rem;
+  text-align: center;
+}
+.auth-switch a {
+  color: var(--primary-500);
+  text-decoration: none;
+  font-weight: 600;
+}
+.auth-switch a:hover { text-decoration: underline; }

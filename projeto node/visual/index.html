@@ -1,93 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de Login</title>
-    <!-- Carrega a biblioteca do Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Painel Principal</title>
+    <!--https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css esta é uma biblioteca para iconis reagirem rapidamente com sua interação-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styleIndex.css">
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<!--primeiro painel de tste cada parte esta inumerada de acordo com as exigencias qualquer mudaças leia a bula kakak-->
 
-    <!-- Container do formulário de login -->
-    <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-sm">
-        <h2 class="text-3xl font-bold text-center text-blue-600 mb-6">Login</h2>
-
-        <div id="status-message" class="hidden p-3 rounded-lg text-sm text-center font-semibold mb-4 transition-all duration-300"></div>
-
-        <div class="space-y-4">
-            <!-- Campo de E-mail -->
-            <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-                <input type="email" id="email" placeholder="Digite seu e-mail" required class="w-full p-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
-            </div>
-
-            <!-- Campo de Senha -->
-            <div>
-                <label for="senha" class="block text-sm font-medium text-gray-700 mb-1">Senha</label>
-                <input type="password" id="senha" placeholder="Digite sua senha" required class="w-full p-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
-            </div>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>VexSystem</h1>
+        <nav>
+            <!--nomes genericos seram mudados segundo as exigencias dos autores-->
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contato</a>
+            <button class="login-btn" id="loginBtn">
+                <i class="fas fa-user"></i>
+                Login
+            </button>
+        </nav>
+    </header>
+    <!--usei um pouco do chat pra fazer a colocação da pagina pra agir corretamente e um pouco do claude para que agisse da forma que desejava no css-->
+    <!-- Cards Content -->
+    <section class="cards">
+        <div class="card">
+            <i class="fas fa-rocket"></i>
+            <h3>Inovação</h3>
+            <p>Soluções tecnológicas de ponta para impulsionar seu negócio para o futuro.</p>
         </div>
-
-        <!-- Botões de ação -->
-        <div class="flex flex-col gap-3 mt-6">
-            <button id="btn-acessar" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">Acessar</button>
-            <button id="btn-cancelar" class="w-full bg-gray-200 text-gray-800 font-bold py-3 rounded-lg shadow-md hover:bg-gray-300 transition duration-300">Cancelar</button>
+        <div class="card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Segurança</h3>
+            <p>Proteção completa dos seus dados com os mais altos padrões de segurança.</p>
         </div>
+        <div class="card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Performance</h3>
+            <p>Otimização máxima para garantir a melhor experiência do usuário.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-users"></i>
+            <h3>Colaboração</h3>
+            <p>Ferramentas que facilitam o trabalho em equipe e aumentam a produtividade.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Mobilidade</h3>
+            <p>Acesse tudo de qualquer lugar com nossa plataforma totalmente responsiva.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-cog"></i>
+            <h3>Personalização</h3>
+            <p>Adapte a plataforma às suas necessidades específicas com facilidade.</p>
+        </div>
+    </section>
 
-        <!-- Botão "Esqueci minha senha" -->
-        <button id="btn-esqueci" class="w-full mt-4 text-sm text-blue-600 hover:text-blue-800 transition duration-300 underline">Esqueci minha senha</button>
+    <!-- Login Overlay -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-box">
+            <button class="close-btn" id="closeBtn">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Entrar</h2>
 
-        <p id="error" class="hidden text-red-500 text-sm mt-4 text-center">E-mail ou senha inválidos!</p>
+            <form id="loginForm">
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Senha" required>
+
+                <div class="login-row">
+                    <label class="remember">
+                        <input type="checkbox"> Lembrar de mim
+                    </label>
+                    <a href="recuperar.html" class="link-forgot">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit">Entrar</button>
+
+                <p class="auth-switch">
+                    Não tem conta?
+                    <a href="register.html" id="openRegisterLink">Registre-se</a>
+                </p>
+            </form>
+        </div>
     </div>
 
-    <!-- Script JavaScript para a lógica do formulário -->
+
     <script>
-        const emailInput = document.getElementById('email');
-        const senhaInput = document.getElementById('senha');
-        const btnAcessar = document.getElementById('btn-acessar');
-        const btnCancelar = document.getElementById('btn-cancelar');
-        const btnEsqueci = document.getElementById('btn-esqueci');
-        const errorMessage = document.getElementById('error');
-        const statusMessage = document.getElementById('status-message');
+        // Elementos
+        const loginBtn = document.getElementById('loginBtn');
+        const loginOverlay = document.getElementById('loginOverlay');
+        const closeBtn = document.getElementById('closeBtn');
 
-        function showMessage(message, type) {
-            statusMessage.textContent = message;
-            statusMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700', 'bg-red-100', 'text-red-700');
-            statusMessage.classList.add('visible', type === 'success' ? 'bg-green-100' : 'bg-red-100', type === 'success' ? 'text-green-700' : 'text-red-700');
-            setTimeout(() => {
-                statusMessage.classList.remove('visible');
-                statusMessage.classList.add('hidden');
-            }, 3000);
-        }
+        // Abrir modal
+        loginBtn.addEventListener('click', () => {
+            loginOverlay.classList.add('active');
+        });
 
-        function login() {
-            const email = emailInput.value;
-            const senha = senhaInput.value;
-            
-            // Lógica de validação simples
-            if (email === "teste@exemplo.com" && senha === "senha123") {
-                showMessage("Login bem-sucedido!", 'success');
-                errorMessage.classList.add('hidden');
-            } else {
-                errorMessage.classList.remove('hidden');
+        // Fechar modal
+        closeBtn.addEventListener('click', () => {
+            loginOverlay.classList.remove('active');
+        });
+
+        // Fechar modal clicando no overlay
+        loginOverlay.addEventListener('click', (e) => {
+            if (e.target === loginOverlay) {
+                loginOverlay.classList.remove('active');
             }
-        }
+        });
 
-        function limparCampos() {
-            emailInput.value = '';
-            senhaInput.value = '';
-            errorMessage.classList.add('hidden');
-            statusMessage.classList.add('hidden');
-        }
-
-        function mostrarMensagemRecuperacao() {
-            showMessage("Função de recuperação em desenvolvimento.", 'info');
-        }
-
-        btnAcessar.addEventListener('click', login);
-        btnCancelar.addEventListener('click', limparCampos);
-        btnEsqueci.addEventListener('click', mostrarMensagemRecuperacao);
+        // Fechar modal com ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && loginOverlay.classList.contains('active')) {
+                loginOverlay.classList.remove('active');
+            }
+        });
     </script>
 </body>
+
 </html>
