@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VexSystem — Home</title>
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styleIndex2.css">
+
+  <!-- Seu CSS base (mantém o que você já tem) -->
+  <link rel="stylesheet" href="styleIndex.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>VexSystem</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+      <button class="login-btn" id="loginBtn">
+        <i class="fas fa-user"></i> Login
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero__content">
+        <h2 class="hero__title">
+          Potencialize seu negócio com tecnologia <span>segura</span> e <span>escalável</span>.
+        </h2>
+        <p class="hero__subtitle">
+          Plataforma moderna, responsiva e pronta para acelerar sua operação com performance
+          e colaboração de alto nível.
+        </p>
+        <div class="hero__cta">
+          <a href="#servicos" class="btn btn--primary">
+            <i class="fa-solid fa-bolt"></i> Ver serviços
+          </a>
+          <button class="btn btn--ghost" id="heroLoginBtn">
+            <i class="fa-solid fa-right-to-bracket"></i> Entrar
+          </button>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div>
+              <strong>99.9%</strong>
+              <span>Uptime</span>
+            </div>
+          </div>
+          <div class="stat">
+            <i class="fa-solid fa-gauge-high"></i>
+            <div>
+              <strong>+60%</strong>
+              <span>Performance</span>
+            </div>
+          </div>
+          <div class="stat">
+            <i class="fa-solid fa-people-group"></i>
+            <div>
+              <strong>Equipe</strong>
+              <span>colaborativa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__illustration">
+        <div class="glass-card">
+          <i class="fa-solid fa-rocket"></i>
+          <h3>Inovação Contínua</h3>
+          <p>Entregas frequentes, sem abrir mão da qualidade.</p>
+        </div>
+        <div class="glass-card">
+          <i class="fa-solid fa-lock"></i>
+          <h3>Segurança Séria</h3>
+          <p>Criptografia e boas práticas do dia zero.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTAQUES (reaproveita seus cards) -->
+    <section id="destaques" class="section">
+      <h2 class="section__title"><i class="fa-solid fa-star"></i> Destaques</h2>
+      <p class="section__subtitle">O que você encontra na VexSystem</p>
+
+      <div class="cards">
+        <div class="card">
+          <i class="fas fa-rocket"></i>
+          <h3>Inovação</h3>
+          <p>Soluções tecnológicas de ponta para impulsionar seu negócio para o futuro.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Segurança</h3>
+          <p>Proteção completa dos seus dados com os mais altos padrões de segurança.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Performance</h3>
+          <p>Otimização máxima para garantir a melhor experiência do usuário.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-users"></i>
+          <h3>Colaboração</h3>
+          <p>Ferramentas que facilitam o trabalho em equipe e aumentam a produtividade.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobilidade</h3>
+          <p>Acesse tudo de qualquer lugar com nossa plataforma totalmente responsiva.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-cog"></i>
+          <h3>Personalização</h3>
+          <p>Adapte a plataforma às suas necessidades específicas com facilidade.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section about">
+      <h2 class="section__title"><i class="fa-solid fa-circle-info"></i> Sobre</h2>
+      <p class="section__subtitle">Por que a VexSystem?</p>
+
+      <div class="about__grid">
+        <div class="about__text glass-block">
+          <h3>Compromisso com resultado</h3>
+          <p>
+            Unimos engenharia de software, UX e boas práticas de segurança para entregar projetos que
+            escalam e geram impacto real.
+          </p>
+          <ul class="about__list">
+            <li><i class="fa-solid fa-check"></i> Arquitetura moderna e cloud-ready</li>
+            <li><i class="fa-solid fa-check"></i> Monitoramento e observabilidade nativos</li>
+            <li><i class="fa-solid fa-check"></i> Roadmaps claros e mensuráveis</li>
+          </ul>
+        </div>
+
+        <div class="about__items">
+          <div class="about__card">
+            <i class="fa-solid fa-microchip"></i>
+            <h4>Tech de ponta</h4>
+            <p>Stack atualizada, integrações e automações.</p>
+          </div>
+          <div class="about__card">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <h4>Parceria</h4>
+            <p>Trabalho próximo ao time e stakeholders.</p>
+          </div>
+          <div class="about__card">
+            <i class="fa-solid fa-chart-pie"></i>
+            <h4>Métricas</h4>
+            <p>KPIs, SLIs e SLOs para guiar decisões.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="section">
+      <h2 class="section__title"><i class="fa-solid fa-screwdriver-wrench"></i> Serviços</h2>
+      <p class="section__subtitle">Escolha o pacote ideal para seu momento</p>
+
+      <div class="cards services">
+        <div class="card service">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h3>Discovery</h3>
+          <p>Imersão, mapeamento de requisitos e protótipo navegável.</p>
+          <a href="#contato" class="btn btn--small">Quero saber mais</a>
+        </div>
+        <div class="card service service--featured">
+          <i class="fa-solid fa-layer-group"></i>
+          <h3>Implantação</h3>
+          <p>Desenvolvimento, QA e entrega contínua em nuvem.</p>
+          <a href="#contato" class="btn btn--small btn--primary">Solicitar proposta</a>
+        </div>
+        <div class="card service">
+          <i class="fa-solid fa-shield"></i>
+          <h3>Suporte & Sec</h3>
+          <p>Observabilidade, resposta a incidentes e hardening.</p>
+          <a href="#contato" class="btn btn--small">Agendar conversa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h3>Pronto para acelerar seu projeto?</h3>
+      <p>Fale com a gente e receba um plano de ação em poucos passos.</p>
+      <div>
+        <a href="#contato" class="btn btn--primary"><i class="fa-solid fa-paper-plane"></i> Falar agora</a>
+        <button class="btn btn--ghost" id="ctaLoginBtn"><i class="fa-solid fa-user-lock"></i> Entrar</button>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section contact">
+      <h2 class="section__title"><i class="fa-solid fa-envelope-open-text"></i> Contato</h2>
+      <p class="section__subtitle">Envie uma mensagem — respondemos rapidinho</p>
+
+      <form class="contact__form" onsubmit="event.preventDefault(); alert('Mensagem enviada! (simulação)')">
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" placeholder="Seu nome" required>
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="voce@exemplo.com" required>
+        </div>
+        <div class="field field--full">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+        </div>
+        <button class="btn btn--primary" type="submit">
+          <i class="fa-solid fa-paper-plane"></i> Enviar
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> VexSystem — Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Login Overlay (mantido do seu código) -->
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-box">
+      <button class="close-btn" id="closeBtn"><i class="fas fa-times"></i></button>
+      <h2>Entrar</h2>
+      <form id="loginForm">
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Senha" required>
+
+        <div class="login-row">
+          <label class="remember"><input type="checkbox"> Lembrar de mim</label>
+          <a href="recuperar.html" class="link-forgot">Esqueceu a senha?</a>
+        </div>
+
+        <button type="submit">Entrar</button>
+
+        <p class="auth-switch">
+          Não tem conta?
+          <a href="register.html" id="openRegisterLink">Registre-se</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    // Ano dinâmico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Elementos do modal
+    const loginBtn = document.getElementById('loginBtn');
+    const heroLoginBtn = document.getElementById('heroLoginBtn');
+    const ctaLoginBtn = document.getElementById('ctaLoginBtn');
+    const loginOverlay = document.getElementById('loginOverlay');
+    const closeBtn = document.getElementById('closeBtn');
+
+    const openLogin = () => loginOverlay.classList.add('active');
+    const closeLogin = () => loginOverlay.classList.remove('active');
+
+    // Abrir modal
+    loginBtn.addEventListener('click', openLogin);
+    heroLoginBtn.addEventListener('click', openLogin);
+    ctaLoginBtn.addEventListener('click', openLogin);
+
+    // Fechar modal
+    closeBtn.addEventListener('click', closeLogin);
+
+    // Fechar clicando fora da caixa
+    loginOverlay.addEventListener('click', (e) => {
+      if (e.target === loginOverlay) closeLogin();
+    });
+
+    // Fechar com ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && loginOverlay.classList.contains('active')) closeLogin();
+    });
+  </script>
+</body>
+</html>

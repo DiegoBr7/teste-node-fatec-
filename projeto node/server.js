@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'visual', 'index.html'));
 });
 
+app.get('/home', (req, res) => {
+  res.sendFile(path.join(__dirname, 'visual', 'home.html'));
+});
+
 // Login (exemplo simples com checagem)
 app.post('/api/auth/login', (req, res) => {
   const { email, senha } = req.body;
@@ -29,7 +33,7 @@ app.post('/api/auth/login', (req, res) => {
   const user = users.find(u => u.email === email && u.senha === senha);
   if (!user) return res.status(401).json({ erro: 'Credenciais inválidas' });
 
-  res.status(200).json({ mensagem: 'Login recebido com sucesso', email, userId: user.id });
+  return res.redirect(303, '/home');
 });
 
 // CREATE
