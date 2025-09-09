@@ -10,3 +10,12 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
+app.post('/api/auth/login', (req, res) => {
+   const { email , senha } = req.body;
+
+   if(!email || !senha){
+    return res.status(400).json({erro: 'Email e senha sao obrigatorios'})
+   }
+
+   res.status(200).json({mensagem : 'Login recebido com sucesso' , email});
+});
