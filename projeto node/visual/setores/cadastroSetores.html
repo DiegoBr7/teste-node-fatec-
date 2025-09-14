@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Setores</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-blue-700 text-white p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Painel do Gerente</h1>
+    <button id="menuBtn" class="bg-white text-blue-700 px-4 py-2 rounded font-semibold hover:bg-gray-200">
+      Menu
+    </button>
+  </header>
+
+  <!-- Conteúdo -->
+  <main class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-xl font-semibold text-gray-800 mb-4">Cadastro de Setores</h2>
+
+    <!-- Formulário -->
+    <form id="setorForm" class="bg-white p-6 rounded shadow space-y-4">
+      <div>
+        <label for="nome" class="block font-medium text-gray-700">Nome do Setor</label>
+        <input type="text" id="nome" class="w-full border p-2 rounded" placeholder="Ex: Recursos Humanos" required>
+      </div>
+
+      <div>
+        <label for="responsavel" class="block font-medium text-gray-700">Responsável</label>
+        <input type="text" id="responsavel" class="w-full border p-2 rounded" placeholder="Ex: Maria Silva" required>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-700 text-white py-2 rounded font-semibold hover:bg-blue-800">
+        Adicionar Setor
+      </button>
+    </form>
+
+    <!-- Feedback -->
+    <p id="mensagem" class="mt-3 text-center font-semibold"></p>
+
+    <!-- Lista de Setores -->
+    <section class="mt-8">
+      <h3 class="text-lg font-semibold text-gray-800 mb-3">Setores Ativos</h3>
+      <ul id="listaSetores" class="space-y-3"></ul>
+    </section>
+  </main>
+
+
+  <script src="../setores/seletorScript.js"></script>
+</body>
+</html>

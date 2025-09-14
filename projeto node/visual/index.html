@@ -1,127 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel Principal</title>
-    <!--https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css esta é uma biblioteca para iconis reagirem rapidamente com sua interação-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styleIndex.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel Principal — VexSystem</title>
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- CSS: base primeiro, complementos depois -->
+  <link rel="stylesheet" href="styleIndex.css">
+  <link rel="stylesheet" href="styleIndex2.css">
 </head>
-<!--primeiro painel de tste cada parte esta inumerada de acordo com as exigencias qualquer mudaças leia a bula kakak-->
-
 <body>
-    <!-- Header -->
-    <header>
-        <h1>VexSystem</h1>
-        <nav>
-            <!--nomes genericos seram mudados segundo as exigencias dos autores-->
-            <a href="#">Home</a>
-            <a href="#">Sobre</a>
-            <a href="#">Serviços</a>
-            <a href="#">Contato</a>
-            <button class="login-btn" id="loginBtn">
-                <i class="fas fa-user"></i>
-                Login
-            </button>
-        </nav>
-    </header>
-    <!--usei um pouco do chat pra fazer a colocação da pagina pra agir corretamente e um pouco do claude para que agisse da forma que desejava no css-->
-    <!-- Cards Content -->
-    <section class="cards">
-        <div class="card">
-            <i class="fas fa-rocket"></i>
-            <h3>Inovação</h3>
-            <p>Soluções tecnológicas de ponta para impulsionar seu negócio para o futuro.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Segurança</h3>
-            <p>Proteção completa dos seus dados com os mais altos padrões de segurança.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-chart-line"></i>
-            <h3>Performance</h3>
-            <p>Otimização máxima para garantir a melhor experiência do usuário.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-users"></i>
-            <h3>Colaboração</h3>
-            <p>Ferramentas que facilitam o trabalho em equipe e aumentam a produtividade.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-mobile-alt"></i>
-            <h3>Mobilidade</h3>
-            <p>Acesse tudo de qualquer lugar com nossa plataforma totalmente responsiva.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-cog"></i>
-            <h3>Personalização</h3>
-            <p>Adapte a plataforma às suas necessidades específicas com facilidade.</p>
-        </div>
-    </section>
+  <!-- Header -->
+  <header>
+    <h1>VexSystem</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Sobre</a>
+      <a href="#">Serviços</a>
+      <a href="#">Contato</a>
+      <button class="login-btn" id="loginBtn">
+        <i class="fas fa-user"></i>
+        Login
+      </button>
+    </nav>
+  </header>
 
-    <!-- Login Overlay -->
-    <div class="login-overlay" id="loginOverlay">
-        <div class="login-box">
-            <button class="close-btn" id="closeBtn">
-                <i class="fas fa-times"></i>
-            </button>
-            <h2>Entrar</h2>
-
-            <form id="loginForm">
-                <input type="email" placeholder="E-mail" required>
-                <input type="password" placeholder="Senha" required>
-
-                <div class="login-row">
-                    <label class="remember">
-                        <input type="checkbox"> Lembrar de mim
-                    </label>
-                    <a href="recuperar.html" class="link-forgot">Esqueceu a senha?</a>
-                </div>
-
-                <button type="submit">Entrar</button>
-
-                <p class="auth-switch">
-                    Não tem conta?
-                    <a href="register.html" id="openRegisterLink">Registre-se</a>
-                </p>
-            </form>
-        </div>
+  <!-- Cards -->
+  <section class="cards">
+    <div class="card">
+      <i class="fas fa-rocket"></i>
+      <h3>Inovação</h3>
+      <p>Soluções tecnológicas de ponta para impulsionar seu negócio para o futuro.</p>
     </div>
+    <div class="card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Segurança</h3>
+      <p>Proteção completa dos seus dados com os mais altos padrões de segurança.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-chart-line"></i>
+      <h3>Performance</h3>
+      <p>Otimização máxima para garantir a melhor experiência do usuário.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-users"></i>
+      <h3>Colaboração</h3>
+      <p>Ferramentas que facilitam o trabalho em equipe e aumentam a produtividade.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Mobilidade</h3>
+      <p>Acesse tudo de qualquer lugar com nossa plataforma totalmente responsiva.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-cog"></i>
+      <h3>Personalização</h3>
+      <p>Adapte a plataforma às suas necessidades específicas com facilidade.</p>
+    </div>
+  </section>
+
+<!-- Login Overlay -->
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box">
+    <button class="close-btn" id="closeBtn"><i class="fas fa-times"></i></button>
+    <h2>Entrar</h2>
+
+    <form id="loginForm">
+      <input type="email" placeholder="E-mail" required>
+      <input type="password" placeholder="Senha" required>
+
+      <div class="login-row">
+        <label class="remember">
+          <input type="checkbox"> Lembrar de mim
+        </label>
+        <a href="recuperar.html" class="link-forgot">Esqueceu a senha?</a>
+      </div>
+
+      <button type="submit">Entrar</button>
+
+      <p class="auth-switch">
+        Não tem conta?
+        <a href="register.html">Registre-se</a>
+      </p>
+    </form>
+  </div>
+</div>
 
 
-    <script>
-        // Elementos
-        const loginBtn = document.getElementById('loginBtn');
-        const loginOverlay = document.getElementById('loginOverlay');
-        const closeBtn = document.getElementById('closeBtn');
+<script>
+  // Elementos
+  const loginBtn = document.getElementById('loginBtn');
+  const loginOverlay = document.getElementById('loginOverlay');
+  const closeBtn = document.getElementById('closeBtn');
 
-        // Abrir modal
-        loginBtn.addEventListener('click', () => {
-            loginOverlay.classList.add('active');
-        });
+  const openLogin = () => loginOverlay.classList.add('active');
+  const closeLogin = () => loginOverlay.classList.remove('active');
 
-        // Fechar modal
-        closeBtn.addEventListener('click', () => {
-            loginOverlay.classList.remove('active');
-        });
+  // Abrir modal
+  loginBtn.addEventListener('click', openLogin);
 
-        // Fechar modal clicando no overlay
-        loginOverlay.addEventListener('click', (e) => {
-            if (e.target === loginOverlay) {
-                loginOverlay.classList.remove('active');
-            }
-        });
+  // Fechar modal
+  closeBtn.addEventListener('click', closeLogin);
 
-        // Fechar modal com ESC
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && loginOverlay.classList.contains('active')) {
-                loginOverlay.classList.remove('active');
-            }
-        });
-    </script>
+  // Fechar clicando fora
+  loginOverlay.addEventListener('click', (e) => {
+    if (e.target === loginOverlay) closeLogin();
+  });
+
+  // Fechar com ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && loginOverlay.classList.contains('active')) closeLogin();
+  });
+
+  // Submit (simulação)
+  document.getElementById('loginForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Login efetuado! (simulação)');
+    closeLogin();
+  });
+</script>
+
 </body>
-
 </html>

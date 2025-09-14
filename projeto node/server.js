@@ -1,3 +1,6 @@
+const setoresRouter = require('./setores');
+
+
 // server.js (CommonJS)
 const express = require('express');
 const path = require('path');
@@ -10,6 +13,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'visual')));
+
 
 const users = []; // { id, nome, email, senha }
 
@@ -102,3 +106,18 @@ app.delete('/api/users/:id', (req, res) => {
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
+
+
+//________________________________________________________________________________
+
+// Middleware fake para simular autenticação (trocar depois por JWT)
+app.use((req, res, next) => {
+  // Exemplo: sempre logado como GERENTE
+  req.user = { id: 1, nome: 'Diego', role: 'GERENTE' };
+  next();
+});
+
+// Rotas de setores
+app.use('/api/setores', setoresRouter);
+
+//________________________________________________________________________________

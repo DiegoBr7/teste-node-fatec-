@@ -8,10 +8,9 @@
   <!-- Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-  <link rel="stylesheet" href="styleIndex2.css">
-
-  <!-- Seu CSS base (mantém o que você já tem) -->
+  <!-- CSS: base primeiro, complementos depois -->
   <link rel="stylesheet" href="styleIndex.css">
+  <link rel="stylesheet" href="styleIndex2.css">
 </head>
 <body>
   <!-- Header -->
@@ -30,7 +29,7 @@
 
   <main>
     <!-- HERO -->
-    <section id="hero" class="hero">
+    <section id="hero" class="hero container">
       <div class="hero__content">
         <h2 class="hero__title">
           Potencialize seu negócio com tecnologia <span>segura</span> e <span>escalável</span>.
@@ -87,79 +86,83 @@
       </div>
     </section>
 
-    <!-- DESTAQUES (reaproveita seus cards) -->
+    <!-- DESTAQUES -->
     <section id="destaques" class="section">
-      <h2 class="section__title"><i class="fa-solid fa-star"></i> Destaques</h2>
-      <p class="section__subtitle">O que você encontra na VexSystem</p>
+      <div class="container">
+        <h2 class="section__title"><i class="fa-solid fa-star"></i> Destaques</h2>
+        <p class="section__subtitle">O que você encontra na VexSystem</p>
 
-      <div class="cards">
-        <div class="card">
-          <i class="fas fa-rocket"></i>
-          <h3>Inovação</h3>
-          <p>Soluções tecnológicas de ponta para impulsionar seu negócio para o futuro.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-shield-alt"></i>
-          <h3>Segurança</h3>
-          <p>Proteção completa dos seus dados com os mais altos padrões de segurança.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Performance</h3>
-          <p>Otimização máxima para garantir a melhor experiência do usuário.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-users"></i>
-          <h3>Colaboração</h3>
-          <p>Ferramentas que facilitam o trabalho em equipe e aumentam a produtividade.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-mobile-alt"></i>
-          <h3>Mobilidade</h3>
-          <p>Acesse tudo de qualquer lugar com nossa plataforma totalmente responsiva.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-cog"></i>
-          <h3>Personalização</h3>
-          <p>Adapte a plataforma às suas necessidades específicas com facilidade.</p>
+        <div class="cards">
+          <div class="card">
+            <i class="fas fa-rocket"></i>
+            <h3>Inovação</h3>
+            <p>Soluções tecnológicas de ponta para impulsionar seu negócio para o futuro.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Segurança</h3>
+            <p>Proteção completa dos seus dados com os mais altos padrões de segurança.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Performance</h3>
+            <p>Otimização máxima para garantir a melhor experiência do usuário.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-users"></i>
+            <h3>Colaboração</h3>
+            <p>Ferramentas que facilitam o trabalho em equipe e aumentam a produtividade.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Mobilidade</h3>
+            <p>Acesse tudo de qualquer lugar com nossa plataforma totalmente responsiva.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-cog"></i>
+            <h3>Personalização</h3>
+            <p>Adapte a plataforma às suas necessidades específicas com facilidade.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- SOBRE -->
     <section id="sobre" class="section about">
-      <h2 class="section__title"><i class="fa-solid fa-circle-info"></i> Sobre</h2>
-      <p class="section__subtitle">Por que a VexSystem?</p>
+      <div class="container">
+        <h2 class="section__title"><i class="fa-solid fa-circle-info"></i> Sobre</h2>
+        <p class="section__subtitle">Por que a VexSystem?</p>
 
-      <div class="about__grid">
-        <div class="about__text glass-block">
-          <h3>Compromisso com resultado</h3>
-          <p>
-            Unimos engenharia de software, UX e boas práticas de segurança para entregar projetos que
-            escalam e geram impacto real.
-          </p>
-          <ul class="about__list">
-            <li><i class="fa-solid fa-check"></i> Arquitetura moderna e cloud-ready</li>
-            <li><i class="fa-solid fa-check"></i> Monitoramento e observabilidade nativos</li>
-            <li><i class="fa-solid fa-check"></i> Roadmaps claros e mensuráveis</li>
-          </ul>
-        </div>
+        <div class="about__grid">
+          <div class="about__text glass-block">
+            <h3>Compromisso com resultado</h3>
+            <p>
+              Unimos engenharia de software, UX e boas práticas de segurança para entregar projetos que
+              escalam e geram impacto real.
+            </p>
+            <ul class="about__list">
+              <li><i class="fa-solid fa-check"></i> Arquitetura moderna e cloud-ready</li>
+              <li><i class="fa-solid fa-check"></i> Monitoramento e observabilidade nativos</li>
+              <li><i class="fa-solid fa-check"></i> Roadmaps claros e mensuráveis</li>
+            </ul>
+          </div>
 
-        <div class="about__items">
-          <div class="about__card">
-            <i class="fa-solid fa-microchip"></i>
-            <h4>Tech de ponta</h4>
-            <p>Stack atualizada, integrações e automações.</p>
-          </div>
-          <div class="about__card">
-            <i class="fa-solid fa-handshake-angle"></i>
-            <h4>Parceria</h4>
-            <p>Trabalho próximo ao time e stakeholders.</p>
-          </div>
-          <div class="about__card">
-            <i class="fa-solid fa-chart-pie"></i>
-            <h4>Métricas</h4>
-            <p>KPIs, SLIs e SLOs para guiar decisões.</p>
+          <div class="about__items">
+            <div class="about__card">
+              <i class="fa-solid fa-microchip"></i>
+              <h4>Tech de ponta</h4>
+              <p>Stack atualizada, integrações e automações.</p>
+            </div>
+            <div class="about__card">
+              <i class="fa-solid fa-handshake-angle"></i>
+              <h4>Parceria</h4>
+              <p>Trabalho próximo ao time e stakeholders.</p>
+            </div>
+            <div class="about__card">
+              <i class="fa-solid fa-chart-pie"></i>
+              <h4>Métricas</h4>
+              <p>KPIs, SLIs e SLOs para guiar decisões.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -167,63 +170,69 @@
 
     <!-- SERVIÇOS -->
     <section id="servicos" class="section">
-      <h2 class="section__title"><i class="fa-solid fa-screwdriver-wrench"></i> Serviços</h2>
-      <p class="section__subtitle">Escolha o pacote ideal para seu momento</p>
+      <div class="container">
+        <h2 class="section__title"><i class="fa-solid fa-screwdriver-wrench"></i> Serviços</h2>
+        <p class="section__subtitle">Escolha o pacote ideal para seu momento</p>
 
-      <div class="cards services">
-        <div class="card service">
-          <i class="fa-solid fa-lightbulb"></i>
-          <h3>Discovery</h3>
-          <p>Imersão, mapeamento de requisitos e protótipo navegável.</p>
-          <a href="#contato" class="btn btn--small">Quero saber mais</a>
-        </div>
-        <div class="card service service--featured">
-          <i class="fa-solid fa-layer-group"></i>
-          <h3>Implantação</h3>
-          <p>Desenvolvimento, QA e entrega contínua em nuvem.</p>
-          <a href="#contato" class="btn btn--small btn--primary">Solicitar proposta</a>
-        </div>
-        <div class="card service">
-          <i class="fa-solid fa-shield"></i>
-          <h3>Suporte & Sec</h3>
-          <p>Observabilidade, resposta a incidentes e hardening.</p>
-          <a href="#contato" class="btn btn--small">Agendar conversa</a>
+        <div class="cards services">
+          <div class="card service">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3>Discovery</h3>
+            <p>Imersão, mapeamento de requisitos e protótipo navegável.</p>
+            <a href="#contato" class="btn btn--small">Quero saber mais</a>
+          </div>
+          <div class="card service service--featured">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Implantação</h3>
+            <p>Desenvolvimento, QA e entrega contínua em nuvem.</p>
+            <a href="#contato" class="btn btn--small btn--primary">Solicitar proposta</a>
+          </div>
+          <div class="card service">
+            <i class="fa-solid fa-shield"></i>
+            <h3>Suporte & Sec</h3>
+            <p>Observabilidade, resposta a incidentes e hardening.</p>
+            <a href="#contato" class="btn btn--small">Agendar conversa</a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
     <section class="cta">
-      <h3>Pronto para acelerar seu projeto?</h3>
-      <p>Fale com a gente e receba um plano de ação em poucos passos.</p>
-      <div>
-        <a href="#contato" class="btn btn--primary"><i class="fa-solid fa-paper-plane"></i> Falar agora</a>
-        <button class="btn btn--ghost" id="ctaLoginBtn"><i class="fa-solid fa-user-lock"></i> Entrar</button>
+      <div class="container" style="text-align:center;">
+        <h3>Pronto para acelerar seu projeto?</h3>
+        <p>Fale com a gente e receba um plano de ação em poucos passos.</p>
+        <div>
+          <a href="#contato" class="btn btn--primary"><i class="fa-solid fa-paper-plane"></i> Falar agora</a>
+          <button class="btn btn--ghost" id="ctaLoginBtn"><i class="fa-solid fa-user-lock"></i> Entrar</button>
+        </div>
       </div>
     </section>
 
     <!-- CONTATO -->
     <section id="contato" class="section contact">
-      <h2 class="section__title"><i class="fa-solid fa-envelope-open-text"></i> Contato</h2>
-      <p class="section__subtitle">Envie uma mensagem — respondemos rapidinho</p>
+      <div class="container">
+        <h2 class="section__title"><i class="fa-solid fa-envelope-open-text"></i> Contato</h2>
+        <p class="section__subtitle">Envie uma mensagem — respondemos rapidinho</p>
 
-      <form class="contact__form" onsubmit="event.preventDefault(); alert('Mensagem enviada! (simulação)')">
-        <div class="field">
-          <label for="nome">Nome</label>
-          <input id="nome" type="text" placeholder="Seu nome" required>
-        </div>
-        <div class="field">
-          <label for="email">E-mail</label>
-          <input id="email" type="email" placeholder="voce@exemplo.com" required>
-        </div>
-        <div class="field field--full">
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
-        </div>
-        <button class="btn btn--primary" type="submit">
-          <i class="fa-solid fa-paper-plane"></i> Enviar
-        </button>
-      </form>
+        <form class="contact__form" onsubmit="event.preventDefault(); alert('Mensagem enviada! (simulação)')">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" placeholder="Seu nome" required>
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" placeholder="voce@exemplo.com" required>
+          </div>
+          <div class="field field--full">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">
+            <i class="fa-solid fa-paper-plane"></i> Enviar
+          </button>
+        </form>
+      </div>
     </section>
   </main>
 
@@ -232,25 +241,57 @@
     <p>© <span id="year"></span> VexSystem — Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Login Overlay (mantido do seu código) -->
+  <!-- Login Overlay (mesmo modal completo da Página 1) -->
   <div class="login-overlay" id="loginOverlay">
     <div class="login-box">
       <button class="close-btn" id="closeBtn"><i class="fas fa-times"></i></button>
-      <h2>Entrar</h2>
+      <h2 id="modalTitle">Entrar</h2>
+
+      <!-- Login -->
       <form id="loginForm">
         <input type="email" placeholder="E-mail" required>
         <input type="password" placeholder="Senha" required>
 
         <div class="login-row">
           <label class="remember"><input type="checkbox"> Lembrar de mim</label>
-          <a href="recuperar.html" class="link-forgot">Esqueceu a senha?</a>
+          <a href="#" class="link-forgot" id="openForgotLink">Esqueceu a senha?</a>
         </div>
 
         <button type="submit">Entrar</button>
 
         <p class="auth-switch">
           Não tem conta?
-          <a href="register.html" id="openRegisterLink">Registre-se</a>
+          <a href="#" id="openRegisterLink">Registre-se</a>
+        </p>
+      </form>
+
+      <!-- Registrar -->
+      <form id="registerForm" class="hidden">
+        <input type="text" placeholder="Nome completo" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Senha" required minlength="6">
+        <input type="password" placeholder="Confirmar senha" required minlength="6">
+
+        <label class="remember">
+          <input type="checkbox" required> Aceito os termos de uso
+        </label>
+
+        <button type="submit">Criar conta</button>
+
+        <p class="auth-switch">
+          Já tem conta?
+          <a href="#" class="back-to-login">Entrar</a>
+        </p>
+      </form>
+
+      <!-- Esqueci a senha -->
+      <form id="forgotForm" class="hidden">
+        <input type="email" placeholder="Seu e-mail cadastrado" required>
+        <button type="submit">Enviar link de redefinição</button>
+
+        <p class="auth-switch">
+          Lembrou a senha?
+          <a href="#" class="back-to-login">Voltar ao login</a>
         </p>
       </form>
     </div>
@@ -267,27 +308,52 @@
     const ctaLoginBtn = document.getElementById('ctaLoginBtn');
     const loginOverlay = document.getElementById('loginOverlay');
     const closeBtn = document.getElementById('closeBtn');
+    const modalTitle = document.getElementById('modalTitle');
+
+    const loginForm = document.getElementById('loginForm');
+    const registerForm = document.getElementById('registerForm');
+    const forgotForm = document.getElementById('forgotForm');
+
+    const openRegisterLink = document.getElementById('openRegisterLink');
+    const openForgotLink   = document.getElementById('openForgotLink');
 
     const openLogin = () => loginOverlay.classList.add('active');
     const closeLogin = () => loginOverlay.classList.remove('active');
 
+    const showView = (view) => {
+      [loginForm, registerForm, forgotForm].forEach(f => { f.reset?.(); f.classList.add('hidden'); });
+      if (view === 'login') { modalTitle.textContent = 'Entrar'; loginForm.classList.remove('hidden'); }
+      if (view === 'register') { modalTitle.textContent = 'Criar conta'; registerForm.classList.remove('hidden'); }
+      if (view === 'forgot') { modalTitle.textContent = 'Recuperar senha'; forgotForm.classList.remove('hidden'); }
+    };
+
     // Abrir modal
-    loginBtn.addEventListener('click', openLogin);
-    heroLoginBtn.addEventListener('click', openLogin);
-    ctaLoginBtn.addEventListener('click', openLogin);
+    [loginBtn, heroLoginBtn, ctaLoginBtn].forEach(btn => {
+      if (btn) btn.addEventListener('click', () => { showView('login'); openLogin(); });
+    });
+
+    // Trocas internas
+    openRegisterLink.addEventListener('click', (e) => { e.preventDefault(); showView('register'); });
+    openForgotLink.addEventListener('click', (e) => { e.preventDefault(); showView('forgot'); });
+    document.addEventListener('click', (e) => {
+      if (e.target.matches('.back-to-login')) { e.preventDefault(); showView('login'); }
+    });
 
     // Fechar modal
     closeBtn.addEventListener('click', closeLogin);
 
-    // Fechar clicando fora da caixa
-    loginOverlay.addEventListener('click', (e) => {
-      if (e.target === loginOverlay) closeLogin();
-    });
+    // Fechar clicando fora
+    loginOverlay.addEventListener('click', (e) => { if (e.target === loginOverlay) closeLogin(); });
 
     // Fechar com ESC
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && loginOverlay.classList.contains('active')) closeLogin();
     });
+
+    // Submits (simulação)
+    loginForm.addEventListener('submit', (e) => { e.preventDefault(); alert('Login efetuado! (simulação)'); closeLogin(); });
+    registerForm.addEventListener('submit', (e) => { e.preventDefault(); alert('Conta criada! (simulação)'); showView('login'); });
+    forgotForm.addEventListener('submit', (e) => { e.preventDefault(); alert('Enviamos um link de redefinição para seu e-mail. (simulação)'); showView('login'); });
   </script>
 </body>
 </html>
