@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
+    // <!-- LOCALHOST :
+
+    // http://localhost:3000/api/setores/? -->
+
 let setores = [];
 
 function autenticarGerente(req, res, next) {
